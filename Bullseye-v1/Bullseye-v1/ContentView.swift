@@ -27,7 +27,9 @@ struct ContentView: View {
                 Text("100")
                     .font(.headline)
             }
-            Button(action: { print("button pressed!") }) {
+            Button(action: {
+                print("button pressed!")
+            }) {
                 Text("Hit me")
             }
         }
