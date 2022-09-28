@@ -32,6 +32,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		138F90DE28E469F800761E42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		138F90DF28E469FE00761E42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		13E2C48528E4316D0076853A = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +65,8 @@
 		13E2C49028E4316E0076853A /* Bullseye-v1 */ = {
 			isa = PBXGroup;
 			children = (
+				138F90DF28E469FE00761E42 /* Views */,
+				138F90DE28E469F800761E42 /* Models */,
 				13E2C49128E4316E0076853A /* Bullseye_v1App.swift */,
 				13E2C49328E4316E0076853A /* ContentView.swift */,
 				13E2C49528E431700076853A /* Assets.xcassets */,
