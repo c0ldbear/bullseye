@@ -21,27 +21,7 @@ struct ContentView: View {
             VStack {
                 InstructionsView(game: $game)
                 SliderView(sliderValue: $sliderValue)
-                Button(action: {
-                    print("button pressed!")
-                    self.alertIsVisible = true
-                }) {
-                    Text("Hit me".uppercased())
-                        .bold()
-                        .font(.title3)
-                }
-                .padding(20.0)
-                .background(
-                    ZStack {
-                        Color("ButtonColor")
-                        LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
-                    }
-                )
-                .foregroundColor(Color.white)
-                .cornerRadius(21.0)
-                .alert(isPresented: $alertIsVisible, content: {
-                    let roundedValue: Int = Int(self.sliderValue.rounded())
-                    return Alert(title: Text("Hello, there!"), message: Text("The slider value is \(roundedValue).\n" + "You scored  \(game.points(sliderValue: roundedValue)) points this round.") , dismissButton: .default(Text("Awesome!")))
-                })
+                HitMeButton(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
             }
         }
     }
