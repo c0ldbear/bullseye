@@ -15,7 +15,8 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color(red: 0.953, green: 0.973, blue: 0.992)
+//            Color(red: 0.953, green: 0.973, blue: 0.992)
+            Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 Text("🎯🎯🎯\nPut the bullseye as close as you can".uppercased())
@@ -65,5 +66,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }
