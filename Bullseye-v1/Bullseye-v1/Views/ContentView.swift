@@ -20,6 +20,8 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 InstructionText(text: "🎯🎯🎯\nPut the bullseye as close as you can")
+                    .padding(.leading, 30.0)
+                    .padding(.trailing, 30.0)
                 Text(String(game.target))
                     .font(.largeTitle)
                     .fontWeight(.black)
