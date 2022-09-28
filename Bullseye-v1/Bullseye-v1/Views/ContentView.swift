@@ -19,10 +19,7 @@ struct ContentView: View {
             Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                InstructionText(text: "🎯🎯🎯\nPut the bullseye as close as you can")
-                    .padding(.leading, 30.0)
-                    .padding(.trailing, 30.0)
-                BigNumberText(text: String(game.target))
+                InstructionsView(game: $game)
                 HStack {
                     Text("1")
                         .font(.headline)
