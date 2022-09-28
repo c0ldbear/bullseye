@@ -18,6 +18,6 @@ struct SliderLabelText: View {
 
 struct SliderLabelText_Previews: PreviewProvider {
     static var previews: some View {
-        SliderLabelText()
+            SliderLabelText(text: "1337")
     }
 }
