@@ -20,16 +20,7 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 InstructionsView(game: $game)
-                HStack {
-                    Text("1")
-                        .font(.headline)
-                        .foregroundColor(Color("TextColor"))
-                    Slider(value: $sliderValue, in: 1.0...100.0)
-                    Text("100")
-                        .font(.headline)
-                        .foregroundColor(Color("TextColor"))
-                }
-                .padding()
+                SliderView(sliderValue: $sliderValue)
                 Button(action: {
                     print("button pressed!")
                     self.alertIsVisible = true

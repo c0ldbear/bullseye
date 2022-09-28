@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct SliderView: View {
+    
+    @Binding var sliderValue: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("1")
+                .font(.headline)
+                .foregroundColor(Color("TextColor"))
+            Slider(value: $sliderValue, in: 1.0...100.0)
+            Text("100")
+                .font(.headline)
+                .foregroundColor(Color("TextColor"))
+        }
+        .padding()
     }
 }
 
-struct SliderView_Previews: PreviewProvider {
-    static var previews: some View {
-        SliderView()
-    }
-}
+//struct SliderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SliderView(sliderValue: )
+//    }
+//}
