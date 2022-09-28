@@ -48,7 +48,7 @@ struct ContentView: View {
                 .background(
                     ZStack {
                         Color("ButtonColor")
-//                        Linear
+                        LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
                     }
                 )
                 .foregroundColor(Color.white)
