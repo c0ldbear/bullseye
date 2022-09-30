@@ -34,13 +34,6 @@ struct HitMeButton: View {
             RoundedRectangle(cornerRadius: 21)
                 .strokeBorder(Color.white, lineWidth: 3.0)
         )
-        .alert(isPresented: $alertIsVisible, content: {
-            let roundedValue: Int = Int(self.sliderValue.rounded())
-            let points = game.points(sliderValue: roundedValue)
-            return Alert(title: Text("Hello, there!"), message: Text("The slider value is \(roundedValue).\n" + "You scored  \(points) points this round.") , dismissButton: .default(Text("Awesome!")) {
-                game.startNewRound(points: points)
-            })
-        })
     }
 }
 
