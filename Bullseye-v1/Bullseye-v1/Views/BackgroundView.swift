@@ -18,8 +18,7 @@ struct BackgroundView: View {
         }
         .padding()
         .background(
-            Color("BackgroundColor")
-                .edgesIgnoringSafeArea(.all)
+            RingsView()
         )
     }
 }
@@ -61,6 +60,24 @@ private struct NumberView: View {
                 LabelText(string: label)
                 RoundRectangleTextView(string: text)
             }
+    }
+}
+
+struct RingsView: View {
+    var body: some View {
+        ZStack {
+            Color("BackgroundColor")
+                .edgesIgnoringSafeArea(.all)
+            ForEach(1..<6) { ring in
+                let size = CGFloat(ring * 100)
+                Circle()
+                    .stroke(lineWidth: 20.0)
+                    .fill(
+                        RadialGradient(gradient: Gradient(colors: [Color("RingColor").opacity(0.8*0.3), Color("RingColor").opacity(0.0)]), center: UnitPoint.center, startRadius: 100, endRadius: 300)
+                    )
+                    .frame(width: size, height: size)
+            }
+        }
     }
 }
 
