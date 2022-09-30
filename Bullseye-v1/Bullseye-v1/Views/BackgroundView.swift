@@ -41,34 +41,31 @@ struct BottomView: View {
     
     var body: some View {
         HStack {
-            VStack {
-                Text("Score".uppercased())
-                    .font(.caption)
-                    .bold()
-                RoundedRectangle(cornerRadius: 20.0)
-                    .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
-                    .frame(width: 68.0, height: 56.0)
-                    .overlay(content: {
-                        Text("999")
-                            .font(.title2)
-                            .bold()
-                    })
-            }
+            NumberView(title: "Score", text: String(game.score))
             Spacer()
+            NumberView(title: "Round", text: String(game.round))
+        }
+    }
+}
+
+private struct NumberView: View {
+    var title: String
+    var text: String
+    
+    var body: some View {
             VStack {
-                Text("Round".uppercased())
+                Text(title.uppercased())
                     .font(.caption)
                     .bold()
                 RoundedRectangle(cornerRadius: 20.0)
                     .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
                     .frame(width: 68.0, height: 56.0)
                     .overlay(content: {
-                        Text("44")
+                        Text(text)
                             .font(.title2)
                             .bold()
                     })
             }
-        }
     }
 }
 
