@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct BodyText: View {
+    var string: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(string)
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .multilineTextAlignment(.center)
+            .lineSpacing(14.0)
     }
 }
 
 struct BodyText_Previews: PreviewProvider {
     static var previews: some View {
-        BodyText()
+        VStack(spacing: 75) {
+            BodyText(string: "Hello, World!")
+            BodyText(string: "Your scored 96!\n🎉 🎉 🎉")
+        }
     }
 }

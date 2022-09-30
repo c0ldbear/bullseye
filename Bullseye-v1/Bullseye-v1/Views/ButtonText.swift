@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct ButtonText: View {
+    var string: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(string.capitalized)
+            .font(.headline)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.white)
+            .background(
+                Color.accentColor
+            )
+            .cornerRadius(12.0)
     }
 }
 
 struct ButtonText_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonText()
+        ButtonText(string: "Start new round")
+            .padding()
     }
 }
