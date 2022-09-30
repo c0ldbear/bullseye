@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133B724328E6CEFD005584EE /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B724228E6CEFD005584EE /* BackgroundView.swift */; };
 		138F90E228E46A9300761E42 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F90E128E46A9300761E42 /* Game.swift */; };
 		138F90EA28E46DBA00761E42 /* Bullseye_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F90E928E46DBA00761E42 /* Bullseye_v1Tests.swift */; };
 		138F90F328E4934600761E42 /* InstructionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F90F228E4934600761E42 /* InstructionText.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		133B724228E6CEFD005584EE /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		138F90E128E46A9300761E42 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		138F90E728E46DBA00761E42 /* Bullseye-v1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bullseye-v1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138F90E928E46DBA00761E42 /* Bullseye_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bullseye_v1Tests.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				13E2C49328E4316E0076853A /* ContentView.swift */,
 				138F90FA28E49E4D00761E42 /* HitMeButton.swift */,
 				138F90F628E495F400761E42 /* InstructionsView.swift */,
+				133B724228E6CEFD005584EE /* BackgroundView.swift */,
 				138F90F828E49CE800761E42 /* SliderView.swift */,
 				138F90FC28E49F5E00761E42 /* SliderLabelText.swift */,
 				138F90F428E4950700761E42 /* BigNumberText.swift */,
@@ -255,6 +258,7 @@
 			files = (
 				13E2C49428E4316E0076853A /* ContentView.swift in Sources */,
 				138F90F728E495F400761E42 /* InstructionsView.swift in Sources */,
+				133B724328E6CEFD005584EE /* BackgroundView.swift in Sources */,
 				138F90F528E4950700761E42 /* BigNumberText.swift in Sources */,
 				138F90E228E46A9300761E42 /* Game.swift in Sources */,
 				13E2C49228E4316E0076853A /* Bullseye_v1App.swift in Sources */,
