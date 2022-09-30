@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct PointsView: View {
+    @Binding var sliderValue: Double
+    @Binding var game: Game
     
     var body: some View {
+        let points = game.points(sliderValue: Int(sliderValue))
         VStack {
             InstructionText(text: "The slider's value is")
-            BigNumberText(text: String(kkk))
+            BigNumberText(text: "\(Int(sliderValue))")
+            BodyText(string: "You scored \(points)\n🎉 🎉 🎉")
+            NewRoundButton(game: $game, points: points)
         }
         .padding()
         .frame(maxWidth: 300.0)
@@ -22,10 +27,23 @@ struct PointsView: View {
     }
 }
 
+private struct NewRoundButton: View {
+    @Binding var game: Game
+    var points: Int
+    
+    var body: some View {
+        Button(action: {
+            game.startNewRound(points: points)
+        }) {
+            ButtonText(string: "Start new round")
+        }
+    }
+}
+
 struct PointsView_Previews: PreviewProvider {
     static var previews: some View {
-        PointsView(game: .constant(Game()))
-        PointsView(game: .constant(Game()))
+        PointsView(sliderValue: .constant(50.0), game: .constant(Game()))
+        PointsView(sliderValue: .constant(50.0), game: .constant(Game()))
             .preferredColorScheme(.dark)
     }
 }
