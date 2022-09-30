@@ -15,9 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-//            Color(red: 0.953, green: 0.973, blue: 0.992)
-            Color("BackgroundColor")
-                .edgesIgnoringSafeArea(.all)
+            BackgroundView(game: $game)
             VStack {
                 InstructionsView(game: $game)
                 SliderView(sliderValue: $sliderValue)
