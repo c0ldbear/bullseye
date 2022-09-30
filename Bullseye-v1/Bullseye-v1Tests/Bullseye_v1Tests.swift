@@ -57,9 +57,11 @@ final class Bullseye_v1Tests: XCTestCase {
     }
     
     func testRestart() throws {
+        let previousTarget = game.target
         game.restartGame()
         XCTAssertEqual(game.score, 0)
         XCTAssertEqual(game.round, 1)
+        XCTAssertNotEqual(game.target, previousTarget)
     }
     
 }
