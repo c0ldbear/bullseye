@@ -21,9 +21,9 @@ struct InstructionsView: View {
     }
 }
 
-//struct InstructionsView_Previews: PreviewProvider {
-//    private var game = Game()
-//    static var previews: some View {
-//        InstructionsView(game: $game)
-//    }
-//}
+struct InstructionsView_Previews: PreviewProvider {
+    private var game = Game()
+    static var previews: some View {
+        InstructionsView(game: .constant(Game()))
+    }
+}
