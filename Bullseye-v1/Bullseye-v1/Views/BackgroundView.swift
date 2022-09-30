@@ -54,9 +54,7 @@ private struct NumberView: View {
     
     var body: some View {
             VStack {
-                Text(title.uppercased())
-                    .font(.caption)
-                    .bold()
+                LabelText(string: title)
                 RoundedRectangle(cornerRadius: 20.0)
                     .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
                     .frame(width: 68.0, height: 56.0)
@@ -66,6 +64,16 @@ private struct NumberView: View {
                             .bold()
                     })
             }
+    }
+}
+
+private struct LabelText: View {
+    var string: String
+    
+    var body: some View {
+        Text(string.uppercased())
+            .font(.caption)
+            .bold()
     }
 }
 
