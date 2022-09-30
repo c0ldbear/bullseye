@@ -41,28 +41,21 @@ struct BottomView: View {
     
     var body: some View {
         HStack {
-            NumberView(title: "Score", text: String(game.score))
+            NumberView(label: "Score", text: String(game.score))
             Spacer()
-            NumberView(title: "Round", text: String(game.round))
+            NumberView(label: "Round", text: String(game.round))
         }
     }
 }
 
 private struct NumberView: View {
-    var title: String
+    var label: String
     var text: String
     
     var body: some View {
             VStack {
-                LabelText(string: title)
-                RoundedRectangle(cornerRadius: 20.0)
-                    .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
-                    .frame(width: 68.0, height: 56.0)
-                    .overlay(content: {
-                        Text(text)
-                            .font(.title2)
-                            .bold()
-                    })
+                LabelText(string: label)
+                RoundRectangleTextView(string: text)
             }
     }
 }
@@ -74,6 +67,21 @@ private struct LabelText: View {
         Text(string.uppercased())
             .font(.caption)
             .bold()
+    }
+}
+
+private struct RoundRectangleTextView: View {
+    var string: String
+    
+    var body: some View {
+        RoundedRectangle(cornerRadius: 20.0)
+            .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
+            .frame(width: 68.0, height: 56.0)
+            .overlay(content: {
+                Text(string)
+                    .font(.title2)
+                    .bold()
+            })
     }
 }
 
