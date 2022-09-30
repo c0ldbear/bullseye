@@ -67,6 +67,7 @@ private struct LabelText: View {
         Text(string.uppercased())
             .font(.caption)
             .bold()
+            .kerning(1.5)
     }
 }
 
@@ -81,6 +82,7 @@ private struct RoundRectangleTextView: View {
                 Text(string)
                     .font(.title2)
                     .bold()
+                    .kerning(-0.2)
             })
     }
 }

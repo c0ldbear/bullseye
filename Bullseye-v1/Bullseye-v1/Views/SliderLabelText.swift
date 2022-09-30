@@ -13,11 +13,12 @@ struct SliderLabelText: View {
         Text(text)
             .font(.headline)
             .foregroundColor(Color("TextColor"))
+            .frame(width: 35.0)
     }
 }
 
 struct SliderLabelText_Previews: PreviewProvider {
     static var previews: some View {
-            SliderLabelText(text: "1337")
+            SliderLabelText(text: "100")
     }
 }
