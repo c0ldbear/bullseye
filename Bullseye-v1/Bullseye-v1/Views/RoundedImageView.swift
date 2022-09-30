@@ -10,22 +10,38 @@ import SwiftUI
 struct RoundedImageView: View {
     
     var systemName: String
-//    rgba(208, 228, 250, 1)
     var isStroke: Bool = false
     
     var body: some View {
         if isStroke {
             RoundedImageViewStroke(systemName: systemName)
         } else {
-            ZStack {
-                Circle()
-                    .fill(Color("TextColor"))
-                Image(systemName: systemName)
-                    .font(.title)
-                    .foregroundColor(Color.white)
-            }
-            .frame(width: 56.0, height: 56.0)
+            RoundedImageViewFilled(systemName: systemName)
         }
+    }
+}
+
+struct RoundedImageViewFilled: View {
+    var systemName: String
+    
+    var body: some View {
+        Image(systemName: systemName)
+            .font(.title)
+            .frame(width: 56.0, height: 56.0)
+            .foregroundColor(Color("ButtonFilledTextColor"))
+            .background(
+                Circle()
+                    .foregroundColor(Color("ButtonFilledBackgroundColor"))
+            )
+        // Alternative:
+//        ZStack {
+//            Circle()
+//                .fill(Color("ButtonFilledBackgroundColor"))
+//            Image(systemName: systemName)
+//                .font(.title)
+//                .foregroundColor(Color("ButtonFilledTextColor"))
+//        }
+//        .frame(width: 56.0, height: 56.0)
     }
 }
 
@@ -40,6 +56,7 @@ struct RoundedImageViewStroke: View {
             .overlay(content: {
                 RoundedRectangle(cornerRadius: 100.0)
                     .strokeBorder(lineWidth: 2.0)
+                    .foregroundColor(Color("ButtonStrokeColor"))
             })
     }
 }
@@ -50,5 +67,10 @@ struct RoundedImageView_Previews: PreviewProvider {
             RoundedImageView(systemName: "arrow.counterclockwise", isStroke: true)
             RoundedImageView(systemName: "list.dash")
         }
+        VStack(spacing: 50) {
+            RoundedImageView(systemName: "arrow.counterclockwise", isStroke: true)
+            RoundedImageView(systemName: "list.dash")
+        }
+        .preferredColorScheme(.dark)
     }
 }
