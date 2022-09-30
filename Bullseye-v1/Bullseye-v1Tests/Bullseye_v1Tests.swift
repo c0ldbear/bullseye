@@ -56,4 +56,10 @@ final class Bullseye_v1Tests: XCTestCase {
         XCTAssertEqual(game.round, 2)
     }
     
+    func testRestart() throws {
+        game.restartGame()
+        XCTAssertEqual(game.score, 0)
+        XCTAssertEqual(game.round, 1)
+    }
+    
 }
