@@ -100,9 +100,9 @@ private struct RoundRectangleTextView: View {
     var string: String
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 20.0)
-            .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
-            .frame(width: 68.0, height: 56.0)
+        RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius)
+            .strokeBorder(Color("ButtonStrokeColor"), lineWidth: Constants.General.strokeWidth)
+            .frame(width: Constants.General.roundRectViewWidth, height: Constants.General.roundRectViewHeight)
             .overlay(content: {
                 Text(string)
                     .font(.title2)

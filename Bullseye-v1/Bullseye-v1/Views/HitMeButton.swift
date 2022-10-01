@@ -31,10 +31,10 @@ struct HitMeButton: View {
             }
         )
         .foregroundColor(Color.white)
-        .cornerRadius(21.0)
+        .cornerRadius(Constants.General.roundRectCornerRadius)
         .overlay(
-            RoundedRectangle(cornerRadius: 21)
-                .strokeBorder(Color.white, lineWidth: 3.0)
+            RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius)
+                .strokeBorder(Color.white, lineWidth: Constants.General.strokeWidth)
         )
     }
 }
