@@ -27,7 +27,7 @@ struct PointsView: View {
         .background(Color("BackgroundColor"))
         .cornerRadius(21.0)
         .shadow(radius: 10, x: 5, y: 5)
-        
+        .transition(.scale)
     }
 }
 
@@ -38,7 +38,9 @@ private struct NewRoundButton: View {
     
     var body: some View {
         Button(action: {
-            alertIsVisible = false
+            withAnimation {
+                alertIsVisible = false
+            }
             game.startNewRound(points: points)
         }) {
             ButtonText(string: "Start new round")

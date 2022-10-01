@@ -15,7 +15,9 @@ struct HitMeButton: View {
     
     var body: some View {
         Button(action: {
-            self.alertIsVisible = true
+            withAnimation {
+                self.alertIsVisible = true
+            }
         }) {
             Text("Hit me".uppercased())
                 .bold()
