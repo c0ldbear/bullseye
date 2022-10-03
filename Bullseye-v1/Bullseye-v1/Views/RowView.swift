@@ -12,10 +12,9 @@ struct RowView: View {
         HStack {
             RoundedTextView()
             Spacer()
-            Text("100")
+            ScoreText()
             Spacer()
-            Text("\(Date().formatted())")
-                .padding(.trailing, 50)
+            DateText()
         }
         .overlay(
             RoundedRectangle(cornerRadius: 100.0)
@@ -43,13 +42,14 @@ struct RoundedTextView: View {
 
 struct ScoreText: View {
     var body: some View {
-        
+        Text("100")
     }
 }
 
 struct DateText: View {
     var body: some View {
-        
+        Text("\(Date().formatted())")
+            .padding(.trailing, 50)
     }
 }
 
