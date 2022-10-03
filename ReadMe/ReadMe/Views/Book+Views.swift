@@ -28,11 +28,11 @@ extension Book {
 extension Image {
     init?(title: String) {
         guard let character = title.first,
-              character.isLetter else {
-            return nil
+              case let symbolName = "\(character.lowercased()).square",
+              UIImage(systemName: symbolName) != nil else {
+                return nil
         }
         
-        let symbolName = "\(character.lowercased()).square"
         self.init(systemName: symbolName)
     }
 }
@@ -44,6 +44,7 @@ struct Book_Previews: PreviewProvider {
             Book.Image(title: Book().title)
             Book.Image(title: "")
             Book.Image(title: "📘")
+            Book.Image(title: "日")
         }
     }
 }
