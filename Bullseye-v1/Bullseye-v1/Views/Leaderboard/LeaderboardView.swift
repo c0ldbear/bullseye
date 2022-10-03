@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct LeaderboardView: View {
+    @Binding var leaderboardIsShowing: Bool
+    
     var body: some View {
         ZStack {
             Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                HeaderView()
+                HeaderView(leaderboardIsShowing: $leaderboardIsShowing)
                 LabelView()
                 RowView(index: 1, score: 999, date: Date())
             }
@@ -22,6 +24,7 @@ struct LeaderboardView: View {
 }
 
 private struct HeaderView: View {
+    @Binding var leaderboardIsShowing: Bool
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
@@ -39,8 +42,12 @@ private struct HeaderView: View {
             
             HStack {
                 Spacer()
-                RoundedImageView(systemName: "xmark")
-                    .padding(.trailing)
+                Button(action: {
+                    leaderboardIsShowing = false
+                }) {
+                    RoundedImageView(systemName: "xmark")
+                        .padding(.trailing)
+                }
             }
         }
         .padding(.leading)
@@ -74,9 +81,10 @@ private struct LabelView: View {
 }
 
 struct LeaderboardView_Previews: PreviewProvider {
+    static var yes = Binding.constant(true)
     static var previews: some View {
-        LeaderboardView()
-        LeaderboardView()
+        LeaderboardView(leaderboardIsShowing: yes)
+        LeaderboardView(leaderboardIsShowing: yes)
             .preferredColorScheme(.dark)
     }
 }
