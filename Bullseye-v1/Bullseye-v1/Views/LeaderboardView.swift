@@ -9,7 +9,43 @@ import SwiftUI
 
 struct LeaderboardView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Spacer()
+                Text("Leaderboard".uppercased())
+                    .font(.title)
+                    .fontWeight(.black)
+                    .kerning(2.0)
+                    .foregroundColor(Color("TextColor"))
+                    .padding(.trailing)
+                Spacer()
+                RoundedImageView(systemName: "xmark")
+            }
+            .padding(.leading)
+            .padding(.trailing)
+            .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
+            
+            HStack {
+                Spacer()
+                Spacer()
+                Text("Score".uppercased())
+                    .font(.caption)
+                    .kerning(1.5)
+                    .multilineTextAlignment(.center)
+                    .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
+                Spacer()
+                Text("Date".uppercased())
+                    .font(.caption)
+                    .kerning(1.5)
+                    .multilineTextAlignment(.center)
+                    .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
+            }
+            .padding(.top)
+            .padding(.leading)
+            .padding(.trailing)
+            .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
+            RowView(index: 1, score: 999, date: Date())
+        }
     }
 }
 
