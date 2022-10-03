@@ -16,6 +16,7 @@
 		133B724F28EA0B97005584EE /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B724E28EA0B97005584EE /* RowView.swift */; };
 		133B725128EAD171005584EE /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B725028EAD171005584EE /* LeaderboardView.swift */; };
 		133B725728EADABB005584EE /* BigBoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B725628EADABB005584EE /* BigBoldText.swift */; };
+		133B725928EAE1C7005584EE /* LeaderboardEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B725828EAE1C7005584EE /* LeaderboardEntry.swift */; };
 		138F90E228E46A9300761E42 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F90E128E46A9300761E42 /* Game.swift */; };
 		138F90EA28E46DBA00761E42 /* Bullseye_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F90E928E46DBA00761E42 /* Bullseye_v1Tests.swift */; };
 		138F90F328E4934600761E42 /* InstructionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138F90F228E4934600761E42 /* InstructionText.swift */; };
@@ -51,6 +52,7 @@
 		133B724E28EA0B97005584EE /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		133B725028EAD171005584EE /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		133B725628EADABB005584EE /* BigBoldText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoldText.swift; sourceTree = "<group>"; };
+		133B725828EAE1C7005584EE /* LeaderboardEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardEntry.swift; sourceTree = "<group>"; };
 		138F90E128E46A9300761E42 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		138F90E728E46DBA00761E42 /* Bullseye-v1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bullseye-v1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138F90E928E46DBA00761E42 /* Bullseye_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bullseye_v1Tests.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				138F90E128E46A9300761E42 /* Game.swift */,
 				133B724C28E8F815005584EE /* Constants.swift */,
+				133B725828EAE1C7005584EE /* LeaderboardEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				138F90FF28E568E700761E42 /* RoundedImageView.swift in Sources */,
 				133B724D28E8F815005584EE /* Constants.swift in Sources */,
 				138F90FD28E49F5E00761E42 /* SliderLabelText.swift in Sources */,
+				133B725928EAE1C7005584EE /* LeaderboardEntry.swift in Sources */,
 				133B724928E71CFF005584EE /* PointsView.swift in Sources */,
 				138F90F928E49CE800761E42 /* SliderView.swift in Sources */,
 				138F90FB28E49E4D00761E42 /* HitMeButton.swift in Sources */,
