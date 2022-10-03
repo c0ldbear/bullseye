@@ -39,8 +39,8 @@ struct HitMeButton: View {
     }
 }
 
-//struct HitMeButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HitMeButton()
-//    }
-//}
+struct HitMeButton_Previews: PreviewProvider {
+    static var previews: some View {
+        HitMeButton(alertIsVisible: .constant(true), sliderValue: .constant(63.54), game: .constant(Game()))
+    }
+}
