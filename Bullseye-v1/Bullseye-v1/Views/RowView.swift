@@ -19,7 +19,7 @@ struct RowView: View {
         .overlay(
             RoundedRectangle(cornerRadius: 100.0)
                 .strokeBorder(lineWidth: 2.0)
-                .foregroundColor(Color("ButtonStrokeColor"))
+                .foregroundColor(Color("LeaderboardRowColor"))
         )
         .padding()
     }
@@ -35,7 +35,7 @@ struct RoundedTextView: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 100.0)
                     .strokeBorder(lineWidth: 2.0)
-                    .foregroundColor(Color("ButtonStrokeColor"))
+                    .foregroundColor(Color("LeaderboardRowColor"))
             )
     }
 }
