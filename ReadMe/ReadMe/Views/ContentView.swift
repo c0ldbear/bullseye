@@ -9,15 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                BookRow(book: Book())
-                BookRow(book: Book())
-                BookRow(book: Book())
-            }
-            Spacer()
+        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+            BookRow(book: Book())
         }
-        .padding()
     }
 }
 
