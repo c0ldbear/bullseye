@@ -21,14 +21,16 @@ struct RowView: View {
                 .strokeBorder(lineWidth: Constants.General.strokeWidth)
                 .foregroundColor(Color("LeaderboardRowColor"))
         )
-        .padding()
+        .padding(.leading)
+        .padding(.trailing)
+        .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
     }
 }
 
 struct RoundedTextView: View {
     var body: some View {
         Text("1")
-            .font(.title2)
+            .font(.title3)
             .fontWeight(.bold)
             .foregroundColor(Color("TextColor"))
             .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
@@ -43,13 +45,24 @@ struct RoundedTextView: View {
 struct ScoreText: View {
     var body: some View {
         Text("100")
+            .font(.title3)
+            .fontWeight(.bold)
+            .multilineTextAlignment(.center)
+            .kerning(-2.0)
+            .foregroundColor(Color("TextColor"))
+            .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
     }
 }
 
 struct DateText: View {
     var body: some View {
-        Text("\(Date().formatted())")
-            .padding(.trailing, 50)
+        Text(Date(), style: .time)
+            .font(.title3)
+            .fontWeight(.bold)
+            .multilineTextAlignment(.center)
+            .kerning(-2.0)
+            .foregroundColor(Color("TextColor"))
+            .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
     }
 }
 
