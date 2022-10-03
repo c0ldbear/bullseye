@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct RowView: View {
+    var index: Int
+    var score: Int
+    var date: Date
+    
     var body: some View {
         HStack {
-            RoundedTextView()
+            RoundedTextView(index: index)
             Spacer()
-            ScoreText()
+            ScoreText(score: score)
             Spacer()
-            DateText()
+            DateText(date: date)
         }
         .overlay(
             RoundedRectangle(cornerRadius: .infinity)
@@ -28,8 +32,10 @@ struct RowView: View {
 }
 
 struct RoundedTextView: View {
+    var index: Int
+    
     var body: some View {
-        Text("1")
+        Text(String(index))
             .font(.title3)
             .fontWeight(.bold)
             .foregroundColor(Color("TextColor"))
@@ -43,8 +49,10 @@ struct RoundedTextView: View {
 }
 
 struct ScoreText: View {
+    var score: Int
+    
     var body: some View {
-        Text("100")
+        Text(String(score))
             .font(.title3)
             .fontWeight(.bold)
             .multilineTextAlignment(.center)
@@ -55,8 +63,10 @@ struct ScoreText: View {
 }
 
 struct DateText: View {
+    var date: Date
+    
     var body: some View {
-        Text(Date(), style: .time)
+        Text(date, style: .time)
             .font(.title3)
             .fontWeight(.bold)
             .multilineTextAlignment(.center)
@@ -69,6 +79,6 @@ struct DateText: View {
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView()
+        RowView(index: 1, score: 999, date: Date())
     }
 }
