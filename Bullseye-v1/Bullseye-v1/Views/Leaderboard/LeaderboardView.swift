@@ -24,11 +24,7 @@ struct LeaderboardView: View {
 private struct HeaderView: View {
     var body: some View {
         ZStack {
-            Text("Leaderboard".uppercased())
-                .font(.title)
-                .fontWeight(.black)
-                .kerning(2.0)
-                .foregroundColor(Color("TextColor"))
+            BigBoldText(text: "Leaderboard")
             HStack {
                 Spacer()
                 RoundedImageView(systemName: "xmark")
