@@ -81,7 +81,8 @@ private struct LabelView: View {
 }
 
 struct LeaderboardView_Previews: PreviewProvider {
-    static var yes = Binding.constant(true)
+    static private var yes = Binding.constant(true)
+    
     static var previews: some View {
         LeaderboardView(leaderboardIsShowing: yes)
         LeaderboardView(leaderboardIsShowing: yes)
