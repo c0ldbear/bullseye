@@ -10,18 +10,35 @@ import SwiftUI
 struct RowView: View {
     var body: some View {
         HStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("1")
+                .font(.title)
+                .foregroundColor(Color("TextColor"))
+                .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 100.0)
+                        .strokeBorder(lineWidth: 2.0)
+                        .foregroundColor(Color("ButtonStrokeColor"))
+                )
+            
             Spacer()
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("100")
             Spacer()
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("\(Date().formatted())")
+                .padding(.trailing, 50)
         }
+        .overlay(
+            RoundedRectangle(cornerRadius: 100.0)
+                .strokeBorder(lineWidth: 2.0)
+                .foregroundColor(Color("ButtonStrokeColor"))
+        )
+        .padding()
     }
 }
+
+
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
         RowView()
-            .padding()
     }
 }
