@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct BookRow: View {
+    let book: Book
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Book.Image(title: book.title)
+            VStack(alignment: .leading) {
+                Text(book.title)
+                    .font(.title2)
+                Text(book.author)
+                    .font(.title3)
+                    .foregroundColor(.secondary)
+            }
+        }
     }
 }
 
 struct BookRow_Previews: PreviewProvider {
     static var previews: some View {
-        BookRow()
+        BookRow(book: Book())
     }
 }

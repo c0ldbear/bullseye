@@ -13,6 +13,7 @@
 		136A1FE728EB13250027E60E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 136A1FE628EB13250027E60E /* Preview Assets.xcassets */; };
 		136A1FEE28EB15530027E60E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A1FED28EB15530027E60E /* Book.swift */; };
 		136A1FF128EB16400027E60E /* Book+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A1FF028EB16400027E60E /* Book+Views.swift */; };
+		136A1FF328EB1F950027E60E /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A1FF228EB1F950027E60E /* BookRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		136A1FE628EB13250027E60E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		136A1FED28EB15530027E60E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		136A1FF028EB16400027E60E /* Book+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+Views.swift"; sourceTree = "<group>"; };
+		136A1FF228EB1F950027E60E /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				136A1FE128EB13240027E60E /* ContentView.swift */,
 				136A1FF028EB16400027E60E /* Book+Views.swift */,
+				136A1FF228EB1F950027E60E /* BookRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				136A1FE228EB13240027E60E /* ContentView.swift in Sources */,
+				136A1FF328EB1F950027E60E /* BookRow.swift in Sources */,
 				136A1FE028EB13240027E60E /* ReadMeApp.swift in Sources */,
 				136A1FEE28EB15530027E60E /* Book.swift in Sources */,
 				136A1FF128EB16400027E60E /* Book+Views.swift in Sources */,

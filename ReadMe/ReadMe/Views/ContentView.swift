@@ -10,9 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack {
-            Book.Image(title: Book().title)
-            Text("Title")
-                .font(.title2)
+            VStack(alignment: .leading) {
+                BookRow(book: Book())
+                BookRow(book: Book())
+                BookRow(book: Book())
+            }
+            Spacer()
         }
         .padding()
     }
