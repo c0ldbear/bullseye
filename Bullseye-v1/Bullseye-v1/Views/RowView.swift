@@ -33,7 +33,7 @@ struct RoundedTextView: View {
             .foregroundColor(Color("TextColor"))
             .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
             .overlay(
-                RoundedRectangle(cornerRadius: 100.0)
+                RoundedRectangle(cornerRadius: .infinity)
                     .strokeBorder(lineWidth: 2.0)
                     .foregroundColor(Color("LeaderboardRowColor"))
             )
