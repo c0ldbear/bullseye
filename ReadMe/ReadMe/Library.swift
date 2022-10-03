@@ -6,7 +6,8 @@
 //
 
 struct Library {
-    var sortedBooks: [Book] { booksCache.sorted() { $0.title.lowercased() < $1.title.lowercased() } }
+    var sortedBooks: [Book] { booksCache }
+//    var sortedBooks: [Book] { booksCache.sorted() { $0.title.lowercased() < $1.title.lowercased() } }
     
     private var booksCache: [Book] = [
         .init(title: "Ein Neuse Land", author: "Shaun Tau"),
