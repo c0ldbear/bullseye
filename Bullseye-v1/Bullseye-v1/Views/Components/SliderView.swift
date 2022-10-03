@@ -21,8 +21,8 @@ struct SliderView: View {
     }
 }
 
-//struct SliderView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SliderView(sliderValue: )
-//    }
-//}
+struct SliderView_Previews: PreviewProvider {
+    static var previews: some View {
+        SliderView(sliderValue: .constant(63.66))
+    }
+}
