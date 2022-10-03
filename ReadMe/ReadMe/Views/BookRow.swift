@@ -9,25 +9,21 @@ import SwiftUI
 
 struct BookRow: View {
     let book: Book
+    let size: CGFloat
     
     var body: some View {
-        HStack {
-            Book.Image(title: book.title)
-            VStack(alignment: .leading) {
-                Text(book.title)
-                    .font(.title2)
-                Text(book.author)
-                    .font(.title3)
-                    .foregroundColor(.secondary)
+        NavigationLink(destination: BookDetailView(book: book)) {
+            HStack {
+                Book.Image(title: book.title, size: size)
+                TitleAndAuthorStack(book: book, titleFont: .title2, authorFont: .title3)
             }
-            .lineLimit(1)
+            .padding(.vertical)
         }
-        .padding(.vertical)
     }
 }
 
 struct BookRow_Previews: PreviewProvider {
     static var previews: some View {
-        BookRow(book: Book())
+        BookRow(book: Book(), size: 80)
     }
 }

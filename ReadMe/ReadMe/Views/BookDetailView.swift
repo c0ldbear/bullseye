@@ -11,12 +11,17 @@ struct BookDetailView: View {
     let book: Book
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            TitleAndAuthorStack(book: book, titleFont: .title, authorFont: .title2)
+            Book.Image(title: book.title)
+            Spacer()
+        }
+        .padding()
     }
 }
 
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailView()
+        BookDetailView(book: .init())
     }
 }
