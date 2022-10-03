@@ -10,14 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack {
-            Image(systemName: "book")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80, height: 80)
-                .font(.title.weight(.light))
-                .foregroundColor(.secondary.opacity(0.5))
-//                .imageScale(.large)
-//                .foregroundColor(.accentColor)
+            Book.Image(title: Book().title)
             Text("Title")
                 .font(.title2)
         }
