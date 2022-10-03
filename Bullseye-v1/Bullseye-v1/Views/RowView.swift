@@ -10,6 +10,7 @@ import SwiftUI
 struct RowView: View {
     var body: some View {
         HStack {
+            RoundedTextView()
             Spacer()
             Text("100")
             Spacer()
@@ -26,6 +27,19 @@ struct RowView: View {
 }
 
 // RoundedTextView
+struct RoundedTextView: View {
+    var body: some View {
+        Text("1")
+            .font(.title)
+            .foregroundColor(Color("TextColor"))
+            .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+            .overlay(
+                RoundedRectangle(cornerRadius: 100.0)
+                    .strokeBorder(lineWidth: 2.0)
+                    .foregroundColor(Color("ButtonStrokeColor"))
+            )
+    }
+}
 // ScoreText
 // DateText
 
