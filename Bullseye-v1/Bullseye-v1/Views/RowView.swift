@@ -30,7 +30,8 @@ struct RowView: View {
 struct RoundedTextView: View {
     var body: some View {
         Text("1")
-            .font(.title)
+            .font(.title2)
+            .fontWeight(.bold)
             .foregroundColor(Color("TextColor"))
             .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
             .overlay(
