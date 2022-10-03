@@ -84,6 +84,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133B725228EAD7D6005584EE /* TextViews */ = {
+			isa = PBXGroup;
+			children = (
+				133B724428E7111D005584EE /* BodyText.swift */,
+				133B724628E718E5005584EE /* ButtonText.swift */,
+				138F90FC28E49F5E00761E42 /* SliderLabelText.swift */,
+				138F90F428E4950700761E42 /* BigNumberText.swift */,
+				138F90F228E4934600761E42 /* InstructionText.swift */,
+			);
+			path = TextViews;
+			sourceTree = "<group>";
+		};
+		133B725428EAD818005584EE /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				133B724E28EA0B97005584EE /* RowView.swift */,
+				133B725028EAD171005584EE /* LeaderboardView.swift */,
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+		133B725528EAD852005584EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				138F90FA28E49E4D00761E42 /* HitMeButton.swift */,
+				138F90F628E495F400761E42 /* InstructionsView.swift */,
+				133B724228E6CEFD005584EE /* BackgroundView.swift */,
+				138F90F828E49CE800761E42 /* SliderView.swift */,
+				138F90FE28E568E700761E42 /* RoundedImageView.swift */,
+				133B724828E71CFF005584EE /* PointsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		138F90DE28E469F800761E42 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,20 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				13E2C49328E4316E0076853A /* ContentView.swift */,
-				133B724428E7111D005584EE /* BodyText.swift */,
-				133B724628E718E5005584EE /* ButtonText.swift */,
-				138F90FA28E49E4D00761E42 /* HitMeButton.swift */,
-				138F90F628E495F400761E42 /* InstructionsView.swift */,
-				133B724228E6CEFD005584EE /* BackgroundView.swift */,
-				138F90F828E49CE800761E42 /* SliderView.swift */,
-				138F90FC28E49F5E00761E42 /* SliderLabelText.swift */,
-				138F90F428E4950700761E42 /* BigNumberText.swift */,
-				138F90F228E4934600761E42 /* InstructionText.swift */,
-				138F90FE28E568E700761E42 /* RoundedImageView.swift */,
-				133B724828E71CFF005584EE /* PointsView.swift */,
+				133B725528EAD852005584EE /* Components */,
+				133B725428EAD818005584EE /* Leaderboard */,
+				133B725228EAD7D6005584EE /* TextViews */,
 				133B724A28E73FFC005584EE /* TestShapesView.swift */,
-				133B724E28EA0B97005584EE /* RowView.swift */,
-				133B725028EAD171005584EE /* LeaderboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
