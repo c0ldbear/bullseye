@@ -8,6 +8,6 @@
 import Foundation
 
 struct LeaderboardEntry {
-    let score: int
+    let score: Int
     let date: Date
 }
