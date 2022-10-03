@@ -10,20 +10,22 @@ import SwiftUI
 struct LeaderboardView: View {
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
+            ZStack {
                 Text("Leaderboard".uppercased())
                     .font(.title)
                     .fontWeight(.black)
                     .kerning(2.0)
                     .foregroundColor(Color("TextColor"))
+                HStack {
+                    Spacer()
+                    RoundedImageView(systemName: "xmark")
+                        .padding(.leading)
                     .padding(.trailing)
-                Spacer()
-                RoundedImageView(systemName: "xmark")
+                }
             }
             .padding(.leading)
             .padding(.trailing)
-            .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
+//            .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
             
             HStack {
                 Spacer()
@@ -48,6 +50,9 @@ struct LeaderboardView: View {
         }
     }
 }
+
+// HeaderView
+// LabelView
 
 struct LeaderboardView_Previews: PreviewProvider {
     static var previews: some View {
