@@ -26,7 +26,6 @@ struct RowView: View {
     }
 }
 
-// RoundedTextView
 struct RoundedTextView: View {
     var body: some View {
         Text("1")
@@ -41,8 +40,18 @@ struct RoundedTextView: View {
             )
     }
 }
-// ScoreText
-// DateText
+
+struct ScoreText: View {
+    var body: some View {
+        
+    }
+}
+
+struct DateText: View {
+    var body: some View {
+        
+    }
+}
 
 
 struct RowView_Previews: PreviewProvider {
