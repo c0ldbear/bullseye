@@ -11,11 +11,11 @@ struct BigBoldText: View {
     var text: String
     
     var body: some View {
-            Text(text.uppercased())
-                .font(.title)
-                .fontWeight(.black)
-                .kerning(2.0)
-                .foregroundColor(Color("TextColor"))
+        Text(text.uppercased())
+            .font(.title)
+            .fontWeight(.black)
+            .kerning(2.0)
+            .foregroundColor(Color("TextColor"))
     }
 }
 
