@@ -28,14 +28,11 @@ extension Book {
 extension Image {
     init?(title: String) {
         guard let character = title.first,
-              case let symbolName = "\(character.lowercased()).square",
-              UIImage(systemName: symbolName) != nil
-//                character.isLetter
-        else {
+              character.isLetter else {
             return nil
         }
         
-//        let symbolName = "\(character.lowercased()).square"
+        let symbolName = "\(character.lowercased()).square"
         self.init(systemName: symbolName)
     }
 }
