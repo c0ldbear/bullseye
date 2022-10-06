@@ -4,10 +4,11 @@
 //
 //  Created by Teddy Juhlin-Henricson on 2022-10-03.
 //
+import SwiftUI
 
 struct Library {
     var sortedBooks: [Book] { booksCache }
-//    var sortedBooks: [Book] { booksCache.sorted() { $0.title.lowercased() < $1.title.lowercased() } }
+    //    var sortedBooks: [Book] { booksCache.sorted() { $0.title.lowercased() < $1.title.lowercased() } }
     
     private var booksCache: [Book] = [
         .init(title: "Ein Neuse Land", author: "Shaun Tau"),
@@ -22,4 +23,6 @@ struct Library {
         .init(title: "Drawing People", author: "Barbera Bradley"),
         .init(title: "What to Say When You Talk to Yourself", author: "Shad Helmstetter")
     ]
+    
+    var images: [Book: Image] = [:]
 }

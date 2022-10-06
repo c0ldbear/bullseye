@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		135BFF6628EF090800E81530 /* PHPickerViewController.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135BFF6528EF090800E81530 /* PHPickerViewController.View.swift */; };
 		136A1FE028EB13240027E60E /* ReadMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A1FDF28EB13240027E60E /* ReadMeApp.swift */; };
 		136A1FE228EB13240027E60E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A1FE128EB13240027E60E /* ContentView.swift */; };
 		136A1FE428EB13250027E60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 136A1FE328EB13250027E60E /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		135BFF6528EF090800E81530 /* PHPickerViewController.View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHPickerViewController.View.swift; sourceTree = "<group>"; };
 		136A1FDC28EB13240027E60E /* ReadMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		136A1FDF28EB13240027E60E /* ReadMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMeApp.swift; sourceTree = "<group>"; };
 		136A1FE128EB13240027E60E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				136A1FF028EB16400027E60E /* Book+Views.swift */,
 				136A1FF228EB1F950027E60E /* BookRow.swift */,
 				136A1FF628EB24CE0027E60E /* BookDetailView.swift */,
+				135BFF6528EF090800E81530 /* PHPickerViewController.View.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				136A1FEE28EB15530027E60E /* Book.swift in Sources */,
 				136A1FF128EB16400027E60E /* Book+Views.swift in Sources */,
 				136A1FF528EB21DC0027E60E /* Library.swift in Sources */,
+				135BFF6628EF090800E81530 /* PHPickerViewController.View.swift in Sources */,
 				136A1FF728EB24CE0027E60E /* BookDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
