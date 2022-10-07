@@ -9,15 +9,24 @@ import class PhotosUI.PHPickerViewController
 import SwiftUI
 
 struct BookDetailView: View {
-    let book: Book
+    @ObservedObject var book: Book
     @Binding var image: Image?
     @State var showingImagePicker = false
     @State var showDeleteDialog = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            TitleAndAuthorStack(book: book, titleFont: .title, authorFont: .title2)
-            VStack {
+            HStack(spacing: 16) {
+                Button {
+                    book.readMe.toggle()
+                } label: {
+                    Image(systemName: book.readMe ? "bookmark.fill" : "bookmark")
+                        .font(.system(size: 48, weight: .light))
+                }
+
+                TitleAndAuthorStack(book: book, titleFont: .title, authorFont: .title2)
+            }
+                VStack {
                 Book.Image(image: image, title: book.title, cornerRadius: 16)
                     .scaledToFit()
                 HStack(spacing: 50) {
