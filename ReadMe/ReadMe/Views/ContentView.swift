@@ -33,6 +33,7 @@ struct ContentView: View {
                     SectionView(section: $0)
                 }
             }
+            .toolbar(content: EditButton.init)
             .navigationTitle("My Library")
         }
         .sheet(isPresented: $addingNewBook, content: NewBookView.init)

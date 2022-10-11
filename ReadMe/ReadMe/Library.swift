@@ -15,10 +15,16 @@ enum Section: CaseIterable {
 
 class Library: ObservableObject {
     var sortedBooks: [Section: [Book]] {
-        let groupedBooks = Dictionary(grouping: booksCache, by: \.readMe)
-        return Dictionary(uniqueKeysWithValues: groupedBooks.map {
-            (($0.key ? .readMe : .finished), $0.value)
-        })
+        get {let groupedBooks = Dictionary(grouping: booksCache, by: \.readMe)
+            return Dictionary(uniqueKeysWithValues: groupedBooks.map {
+                (($0.key ? .readMe : .finished), $0.value)
+            })
+        }
+        set {
+            booksCache = newValue
+                .sorted { $1.key == .finished }
+                .flatMap { $0.value }
+        }
     }
     //    var sortedBooks: [Book] { booksCache.sorted() { $0.title.lowercased() < $1.title.lowercased() } }
     func sortBooks() {
@@ -33,6 +39,20 @@ class Library: ObservableObject {
     func addNewBook(_ book: Book, image: Image?) {
         booksCache.insert(book, at: 0)
         images[book] = image
+    }
+    
+    func deleteBooks(atOffset offsets: IndexSet, section: Section) {
+        let booksBeforeDeletion = booksCache
+        sortedBooks[section]?.remove(atOffsets: offsets)
+        for change in booksCache.difference(from: booksBeforeDeletion) {
+            if case .remove(_, let deletedBook, _) = change {
+                images[deletedBook] = nil
+            }
+        }
+    }
+    
+    func moveBooks(oldOffsets: IndexSet, newOffset: Int, section: Section) {
+        sortedBooks[section]?.move(fromOffsets: oldOffsets, toOffset: newOffset)
     }
     
     /// An in-memory cache of the manually-sorted books that are persistently stored.
