@@ -52,7 +52,6 @@ struct TitleAndAuthorStack: View {
     let book: Book
     let titleFont: Font
     let authorFont: Font
-    let reviewFont: Font
     
     var body: some View {
         Group {
@@ -78,7 +77,7 @@ extension Book.Image {
 struct Book_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            TitleAndAuthorStack(book: .init(), titleFont: .title, authorFont: .title2, reviewFont: .subheadline)
+            TitleAndAuthorStack(book: .init(), titleFont: .title, authorFont: .title2)
                 .frame(maxHeight: 50)
                 .padding()
             Book.Image(title: Book().title, size: 80)

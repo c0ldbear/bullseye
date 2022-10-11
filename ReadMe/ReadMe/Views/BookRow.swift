@@ -18,7 +18,7 @@ struct BookRow: View {
                 HStack {
                     Book.Image(image: image, title: book.title, size: size, cornerRadius: 12)
                     VStack(alignment: .leading) {
-                        TitleAndAuthorStack(book: book, titleFont: .title2, authorFont: .title3, reviewFont: .subheadline)
+                        TitleAndAuthorStack(book: book, titleFont: .title2, authorFont: .title3)
                         if !book.microReview.isEmpty {
                             Spacer()
                             Text(book.microReview)

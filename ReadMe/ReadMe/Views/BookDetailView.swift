@@ -24,7 +24,7 @@ struct BookDetailView: View {
                         .font(.system(size: 48, weight: .light))
                 }
 
-                TitleAndAuthorStack(book: book, titleFont: .title, authorFont: .title2, reviewFont: .title3)
+                TitleAndAuthorStack(book: book, titleFont: .title, authorFont: .title2)
             }
                 VStack {
                     Divider()
