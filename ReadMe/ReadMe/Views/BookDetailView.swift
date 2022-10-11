@@ -26,6 +26,11 @@ struct BookDetailView: View {
             }
             ReviewAndImageStackView(book: book, image: $library.images[book])
         }
+        .onDisappear {
+            withAnimation {
+                library.sortBooks()
+            }
+        }
         .padding()
         
     }

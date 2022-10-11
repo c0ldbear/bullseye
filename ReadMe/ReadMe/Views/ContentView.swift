@@ -28,13 +28,49 @@ struct ContentView: View {
                 }
                 .buttonStyle(.borderless)
                 .padding(.vertical, 8)
-                ForEach(library.sortedBooks) { book in
-                    BookRow(book: book, size: 80.0)
+                
+                ForEach(Section.allCases, id: \.self) {
+                    SectionView(section: $0)
                 }
             }
             .navigationTitle("My Library")
         }
         .sheet(isPresented: $addingNewBook, content: NewBookView.init)
+    }
+}
+
+private struct SectionView: View {
+    let section: Section
+    @EnvironmentObject var library: Library
+    var title: String {
+        switch section {
+        case .readMe:
+            return "Read Me"
+        case .finished:
+            return "Finished"
+        }
+    }
+    
+    var body: some View {
+        if let books = library.sortedBooks[section] {
+            SwiftUI.Section {
+                ForEach(books) { book in
+                    BookRow(book: book, size: 80.0)
+                }
+            } header: {
+                ZStack {
+                    Image("BookTexture")
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Text(title)
+                        .font(.custom("American Typewriter", size: 24))
+                        .foregroundColor(.primary)
+                }
+                    .listRowInsets(.init())
+            }
+
+        }
     }
 }
 
