@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State var library = Library()
-    @State var showAddNewBook: Bool = false
+    @State var addingNewBook: Bool = false
     
     var body: some View {
         NavigationView {
             List {
                 Button {
-                    showAddNewBook = true
+                    addingNewBook = true
                 } label: {
                     Spacer()
                     VStack() {
@@ -34,6 +34,7 @@ struct ContentView: View {
             }
             .navigationTitle("My Library")
         }
+        .sheet(isPresented: $addingNewBook, content: NewBookView.init)
     }
 }
 
