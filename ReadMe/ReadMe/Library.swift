@@ -4,13 +4,22 @@
 //
 //  Created by Teddy Juhlin-Henricson on 2022-10-03.
 //
+
+import Combine
 import SwiftUI
 
-struct Library {
+class Library: ObservableObject {
     var sortedBooks: [Book] { booksCache }
     //    var sortedBooks: [Book] { booksCache.sorted() { $0.title.lowercased() < $1.title.lowercased() } }
     
-    private var booksCache: [Book] = [
+    /// Adds a new book at the start of the library's manually-sorted books.
+    func addNewBook(_ book: Book, image: Image?) {
+        booksCache.insert(book, at: 0)
+        images[book] = image
+    }
+    
+    /// An in-memory cache of the manually-sorted books that are persistently stored.
+    @Published private var booksCache: [Book] = [
         .init(title: "Ein Neuse Land", author: "Shaun Tau"),
         .init(title: "Bosch", author: "Laurinda Dixon", microReview: "Soo good!"),
         .init(title: "Dare to Lead", author: "Brené Brown"),
@@ -24,5 +33,5 @@ struct Library {
         .init(title: "What to Say When You Talk to Yourself", author: "Shad Helmstetter", microReview: "I'm best.")
     ]
     
-    var images: [Book: Image] = [:]
+    @Published var images: [Book: Image] = [:]
 }

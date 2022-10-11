@@ -10,8 +10,7 @@ import SwiftUI
 
 struct BookDetailView: View {
     @ObservedObject var book: Book
-    @Binding var image: Image?
-    
+    @EnvironmentObject var library: Library
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,7 +24,7 @@ struct BookDetailView: View {
 
                 TitleAndAuthorStack(book: book, titleFont: .title, authorFont: .title2)
             }
-            ReviewAndImageStackView(book: book, image: $image)
+            ReviewAndImageStackView(book: book, image: $library.images[book])
         }
         .padding()
         
@@ -34,6 +33,7 @@ struct BookDetailView: View {
 
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailView(book: .init(), image: .constant(nil))
+        BookDetailView(book: .init())
+            .environmentObject(Library())
     }
 }

@@ -10,13 +10,13 @@ import SwiftUI
 struct BookRow: View {
     @ObservedObject var book: Book
     let size: CGFloat
-    @Binding var image: Image?
+    @EnvironmentObject var library: Library
     
     var body: some View {
-        NavigationLink(destination: BookDetailView(book: book, image: $image)) {
+        NavigationLink(destination: BookDetailView(book: book)) {
             VStack {
                 HStack {
-                    Book.Image(image: image, title: book.title, size: size, cornerRadius: 12)
+                    Book.Image(image: library.images[book], title: book.title, size: size, cornerRadius: 12)
                     VStack(alignment: .leading) {
                         TitleAndAuthorStack(book: book, titleFont: .title2, authorFont: .title3)
                         if !book.microReview.isEmpty {
@@ -36,6 +36,7 @@ struct BookRow: View {
 
 struct BookRow_Previews: PreviewProvider {
     static var previews: some View {
-        BookRow(book: Book(), size: 80, image: .constant(nil))
+        BookRow(book: Book(), size: 80)
+            .environmentObject(Library())
     }
 }

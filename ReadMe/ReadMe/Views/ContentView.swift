@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var library = Library()
+    @EnvironmentObject var library: Library
     @State var addingNewBook: Bool = false
     
     var body: some View {
@@ -29,7 +29,7 @@ struct ContentView: View {
                 .buttonStyle(.borderless)
                 .padding(.vertical, 8)
                 ForEach(library.sortedBooks) { book in
-                    BookRow(book: book, size: 80.0, image: $library.images[book])
+                    BookRow(book: book, size: 80.0)
                 }
             }
             .navigationTitle("My Library")
@@ -40,6 +40,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(Library())
     }
 }
