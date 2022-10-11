@@ -24,10 +24,15 @@ struct BookDetailView: View {
                         .font(.system(size: 48, weight: .light))
                 }
 
-                TitleAndAuthorStack(book: book, titleFont: .title, authorFont: .title2)
+                TitleAndAuthorStack(book: book, titleFont: .title, authorFont: .title2, reviewFont: .title3)
             }
                 VStack {
-                Book.Image(image: image, title: book.title, cornerRadius: 16)
+                    Divider()
+                        .padding(.vertical)
+                    TextField("Review...", text: $book.microReview)
+                    Divider()
+                        .padding(.vertical)
+                    Book.Image(image: image, title: book.title, cornerRadius: 16)
                     .scaledToFit()
                 HStack(spacing: 50) {
                     if image != nil {

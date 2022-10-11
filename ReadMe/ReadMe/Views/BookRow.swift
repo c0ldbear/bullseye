@@ -8,17 +8,28 @@
 import SwiftUI
 
 struct BookRow: View {
-    let book: Book
+    @ObservedObject var book: Book
     let size: CGFloat
     @Binding var image: Image?
     
     var body: some View {
         NavigationLink(destination: BookDetailView(book: book, image: $image)) {
-            HStack {
-                Book.Image(image: image, title: book.title, size: size, cornerRadius: 12)
-                TitleAndAuthorStack(book: book, titleFont: .title2, authorFont: .title3)
+            VStack {
+                HStack {
+                    Book.Image(image: image, title: book.title, size: size, cornerRadius: 12)
+                    VStack(alignment: .leading) {
+                        TitleAndAuthorStack(book: book, titleFont: .title2, authorFont: .title3, reviewFont: .subheadline)
+                        if !book.microReview.isEmpty {
+                            Spacer()
+                            Text(book.microReview)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .lineLimit(1)
+                }
+                .padding(.vertical)
             }
-            .padding(.vertical)
         }
     }
 }
