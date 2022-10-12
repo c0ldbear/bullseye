@@ -17,6 +17,9 @@
 		136A1FF328EB1F950027E60E /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A1FF228EB1F950027E60E /* BookRow.swift */; };
 		136A1FF528EB21DC0027E60E /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A1FF428EB21DC0027E60E /* Library.swift */; };
 		136A1FF728EB24CE0027E60E /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A1FF628EB24CE0027E60E /* BookDetailView.swift */; };
+		13FB597128F5B33500CC7522 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB597028F5B33500CC7522 /* NewBookView.swift */; };
+		13FB597328F5B4B200CC7522 /* ReviewAndImageStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB597228F5B4B200CC7522 /* ReviewAndImageStackView.swift */; };
+		13FB597528F5C25900CC7522 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB597428F5C25900CC7522 /* SectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		136A1FF228EB1F950027E60E /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
 		136A1FF428EB21DC0027E60E /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		136A1FF628EB24CE0027E60E /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		13FB597028F5B33500CC7522 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
+		13FB597228F5B4B200CC7522 /* ReviewAndImageStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewAndImageStackView.swift; sourceTree = "<group>"; };
+		13FB597428F5C25900CC7522 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +91,12 @@
 			isa = PBXGroup;
 			children = (
 				136A1FE128EB13240027E60E /* ContentView.swift */,
+				13FB597428F5C25900CC7522 /* SectionView.swift */,
 				136A1FF028EB16400027E60E /* Book+Views.swift */,
 				136A1FF228EB1F950027E60E /* BookRow.swift */,
 				136A1FF628EB24CE0027E60E /* BookDetailView.swift */,
+				13FB597228F5B4B200CC7522 /* ReviewAndImageStackView.swift */,
+				13FB597028F5B33500CC7522 /* NewBookView.swift */,
 				135BFF6528EF090800E81530 /* PHPickerViewController.View.swift */,
 			);
 			path = Views;
@@ -165,6 +174,9 @@
 			files = (
 				136A1FE228EB13240027E60E /* ContentView.swift in Sources */,
 				136A1FF328EB1F950027E60E /* BookRow.swift in Sources */,
+				13FB597528F5C25900CC7522 /* SectionView.swift in Sources */,
+				13FB597128F5B33500CC7522 /* NewBookView.swift in Sources */,
+				13FB597328F5B4B200CC7522 /* ReviewAndImageStackView.swift in Sources */,
 				136A1FE028EB13240027E60E /* ReadMeApp.swift in Sources */,
 				136A1FEE28EB15530027E60E /* Book.swift in Sources */,
 				136A1FF128EB16400027E60E /* Book+Views.swift in Sources */,
